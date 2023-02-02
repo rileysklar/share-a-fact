@@ -281,7 +281,7 @@ ul {
 
   .fact-form input,
   .fact-form select {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .btn-large {
@@ -290,10 +290,10 @@ ul {
   }
 
   .vote-buttons button {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .tag {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
