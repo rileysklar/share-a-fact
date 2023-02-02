@@ -245,7 +245,7 @@ ul {
 
 @media only screen and (max-width: 767px) {
   * {
-    font-size: 0.75em;
+    font-size: 1em;
   }
 
   body {
