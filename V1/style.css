@@ -172,6 +172,11 @@ ul {
   transform: scale(110%) rotate(-2deg);
 }
 
+.btn:active {
+  transform: scale(95%) rotate(0deg);
+  translatey: -10px;
+}
+
 .btn-large {
   font-size: 20px;
   padding: 20px 32px 17px;
@@ -230,6 +235,18 @@ ul {
   font-size: 18px;
   margin-right: 18px;
   text-align: center;
+}
+
+@media (max-width: 1270px) {
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
 }
 
 @media (max-width: 1025px) {
