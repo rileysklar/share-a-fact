@@ -104,12 +104,12 @@ function Loader() {
 }
 
 function Header({ showForm, setShowForm }) {
-  const appTitle = "Today I Learned";
+  const appTitle = "Did you know?";
 
   return (
     <header className="header">
       <div className="logo">
-        <img src="logo.png" height="68" width="68" alt="Today I Learned Logo" />
+        <img src="logo.png" height="68" width="68" alt="ShakeWell Creative" />
         <h1>{appTitle}</h1>
       </div>
 
@@ -196,16 +196,16 @@ function NewFactForm({ setFacts, setShowForm }) {
     <form className="fact-form" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Share a fact with the world..."
+        placeholder="share a fact"
         value={text}
         onChange={(e) => setText(e.target.value)}
         disabled={isUploading}
       />
-      <span>{200 - textLength}</span>
+      <span>✏️ {200 - textLength}</span>
       <input
         value={source}
         type="text"
-        placeholder="Trustworthy source..."
+        placeholder="source"
         onChange={(e) => setSource(e.target.value)}
         disabled={isUploading}
       />
@@ -214,7 +214,7 @@ function NewFactForm({ setFacts, setShowForm }) {
         onChange={(e) => setCategory(e.target.value)}
         disabled={isUploading}
       >
-        <option value="">Choose category:</option>
+        <option value="">choose category:</option>
         {CATEGORIES.map((cat) => (
           <option key={cat.name} value={cat.name}>
             {cat.name.toUpperCase()}
@@ -237,7 +237,7 @@ function CategoryFilter({ setCurrentCategory }) {
             className="btn btn-all-categories"
             onClick={() => setCurrentCategory("all")}
           >
-            All
+            all
           </button>
         </li>
 
@@ -272,7 +272,14 @@ function FactList({ facts, setFacts }) {
           <Fact key={fact.id} fact={fact} setFacts={setFacts} />
         ))}
       </ul>
-      <p>There are {facts.length} facts in the database. Add your own!</p>
+      <p>There are {facts.length} facts in the database.</p>
+      <h2>
+        "Did you know?" App by{" "}
+        <a class="riley" href="https://rileysklar.io">
+          Riley Sklar
+        </a>
+      </h2>
+      <script src="script.js"></script>
     </section>
   );
 }
